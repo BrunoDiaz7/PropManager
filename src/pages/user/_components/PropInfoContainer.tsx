@@ -22,7 +22,7 @@ const SectionContainer = styled(Box)({
   justifyContent: 'space-between',
 });
 
-export const PropInfoContainer: React.FC<PropInfoContainerProps> = ({
+const PropInfoContainer: React.FC<PropInfoContainerProps> = ({
   contrato,
 }) => {
   if (!contrato) {
@@ -54,3 +54,5 @@ export const PropInfoContainer: React.FC<PropInfoContainerProps> = ({
     </ContentContainer>
   ) : null;
 };
+
+export default PropInfoContainer;

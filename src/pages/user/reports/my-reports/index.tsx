@@ -1,5 +1,5 @@
 import {MainAppLayout} from '@/layouts';
-import {ReportCard} from './_components/ReportCard';
+import {ReportCard} from '@/components';
 import {getMyReports} from '@/services/reports';
 import {useEffect, useState} from 'react';
 import {EmptyReportsContainer} from '@/components';

@@ -24,7 +24,7 @@ const SectionContainer = styled(Box)({
   justifyContent: 'space-between',
 });
 
-export const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
+const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
   const [showDetails, setShowDetails] = useState(true);
   const handleClick = () => {
     setShowDetails(!showDetails);
@@ -138,3 +138,5 @@ export const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
     </ContentContainer>
   );
 };
+
+export default InfoContainer

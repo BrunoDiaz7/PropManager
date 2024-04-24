@@ -1,6 +1,6 @@
 import React from 'react';
 import {ContentContainer} from '@/components';
-import {CreateContainer} from './_components/CreateContainer';
+import {CreateContainer} from '../../../components/CreateContainer/CreateContainer';
 import {Box, Grid, Button} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';

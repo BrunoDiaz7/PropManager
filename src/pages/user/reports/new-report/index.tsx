@@ -1,6 +1,6 @@
 import {MainAppLayout} from '@/layouts';
 import {ContentContainer} from '@/components';
-import {Form} from './_components/From';
+import {NewReportForm} from '@/components';
 import {useSnackbarStore, useMainLoaderStore} from '@/store';
 import {useSession} from 'next-auth/react';
 import jwt from 'jsonwebtoken';
@@ -23,7 +23,7 @@ const AddReportPage = () => {
       <ContentContainer
         sx={{marginBottom: {xs: '5%', md: '20%', lg: '15%'}, marginTop: '1%'}}
       >
-        <Form
+        <NewReportForm
           id_usuario={userId}
           onSubmit={async values => {
             try {

@@ -1,3 +1,5 @@
-export const Propiedades = () => {
+const Propiedades = () => {
   return <p>Popiedades</p>;
 };
+
+export default Propiedades;

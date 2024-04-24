@@ -10,3 +10,7 @@ export {ContainerLogin} from './ContainerLogin/ContainerLogin';
 export {SessionLoader} from './SessionLoader/SessionLoader';
 export {UserGreetings} from './UserGreetings/UserGreetings';
 export {EmptyReportsContainer} from './EmptyReportsContainer/EmptyReportsContainer';
+export {LogInForm} from './Form/LogInForm'
+export {NewReportForm} from './Form/NewReportForm'
+export {ReportCard} from './ReportCard/ReportCard'
+export {CreateContainer} from './CreateContainer/CreateContainer';
