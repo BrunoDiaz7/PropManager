@@ -14,3 +14,4 @@ export {LogInForm} from './Form/LogInForm'
 export {NewReportForm} from './Form/NewReportForm'
 export {ReportCard} from './ReportCard/ReportCard'
 export {CreateContainer} from './CreateContainer/CreateContainer';
+export {SkeletonScreen} from './SkeletonScreen/SkeletonScreen'

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ContentContainer} from '@/components';
+import {ContentContainer, SkeletonScreen} from '@/components';
 import {styled, Box, Typography, IconButton} from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {themeDark} from '@/theme';
@@ -31,7 +31,15 @@ const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
   };
 
   if (!contrato) {
-    return <div>Cargando...</div>;
+    return (
+      <SkeletonScreen
+        sx={{
+          height: {xs: '200px', md: '300px', lg: '400px'},
+          marginTop: {xs: '2%', md: '4%', lg: '1%'},
+          marginBottom: {xs: '9%', md: '15%', lg: '10%'},
+        }}
+      />
+    );
   }
 
   const fechaInicio = new Date(contrato.contrato.fecha_inicio);
@@ -139,4 +147,4 @@ const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
   );
 };
 
-export default InfoContainer
+export default InfoContainer;

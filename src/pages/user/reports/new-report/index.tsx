@@ -1,6 +1,5 @@
 import {MainAppLayout} from '@/layouts';
-import {ContentContainer} from '@/components';
-import {NewReportForm} from '@/components';
+import {ContentContainer, NewReportForm} from '@/components';
 import {useSnackbarStore, useMainLoaderStore} from '@/store';
 import {useSession} from 'next-auth/react';
 import jwt from 'jsonwebtoken';

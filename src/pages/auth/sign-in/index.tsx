@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Grid, Switch} from '@mui/material';
+import {Box, Grid} from '@mui/material';
 import {ContainerLogin, ContentContainer} from '@/components';
 import styles from '@/styles/signIn.module.css';
 import {themeDark} from '@/theme';

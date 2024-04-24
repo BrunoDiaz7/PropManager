@@ -26,7 +26,7 @@ const PropInfoContainer: React.FC<PropInfoContainerProps> = ({
   contrato,
 }) => {
   if (!contrato) {
-    return <div>Cargando...</div>;
+    return <Typography variant='body2'>...Cargando detalles de tu contrato</Typography>;
   }
 
   const InfoPropiedad = contrato?.contrato?.info_propiedad;
