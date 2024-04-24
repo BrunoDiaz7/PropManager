@@ -3,7 +3,6 @@ import {ReportCard} from '@/components';
 import {getMyReports} from '@/services/reports';
 import {useEffect, useState} from 'react';
 import {EmptyReportsContainer} from '@/components';
-import {Tsukimi_Rounded} from 'next/font/google';
 
 const MyReportsPage = () => {
   const [reports, setReports] = useState([]);

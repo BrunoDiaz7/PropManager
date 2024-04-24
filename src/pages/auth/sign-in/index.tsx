@@ -8,7 +8,7 @@ import {LogInCredentials} from '@/types/auth';
 import {AuthenticationError} from '@/types/errors';
 import {useRouter} from 'next/router';
 import {signIn} from 'next-auth/react';
-import {LogInForm} from '../../../components/Form/LogInForm';
+import {LogInForm} from '@/components';
 
 export const SignIn = () => {
   const router = useRouter();
