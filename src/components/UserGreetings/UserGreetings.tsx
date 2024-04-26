@@ -9,12 +9,13 @@ type UserGreetingsProps = {
 export const UserGreetings: React.FC<UserGreetingsProps> = ({sx}) => {
   const {data: session} = useSession();
   const auth = !!session;
-  const userMail = session?.usuario.info.usuario;
+  // @ts-ignore
+  const userName = session?.usuario.info?.nombreUsuario
   return auth ? (
     <Typography
       sx={sx}
       variant="body2"
-    >{`¡Bienvenido ${userMail}!`}</Typography>
+    >{`¡Bienvenido ${userName}!`}</Typography>
   ) : (
     ''
   );
