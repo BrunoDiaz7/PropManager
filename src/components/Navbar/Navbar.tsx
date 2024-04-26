@@ -128,13 +128,6 @@ export const Navbar: React.FC<NavbarProps> = ({auth}) => {
         onClose={() => setOpen(false)}
       >
         <NavListDrawer auth={auth} navList={pages} />
-        <IconButton
-          onClick={() => logOut()}
-          sx={{position: 'absolute', bottom: 0}}
-        >
-          <LogoutIcon sx={{color: 'white'}} />
-          <Typography variant="body2">Cerrar Sesión</Typography>
-        </IconButton>
       </Drawer>
     </>
   );

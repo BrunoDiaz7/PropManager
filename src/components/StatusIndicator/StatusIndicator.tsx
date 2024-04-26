@@ -10,7 +10,7 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({status}) => {
   const statusColors = {
     Pendiente: '#FF0000',
     Atendido: '#FFA500',
-    Resuelto: '#008000',
+    Completado: '#008000',
   };
   // @ts-ignore
   const color = statusColors[status];

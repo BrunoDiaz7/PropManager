@@ -32,17 +32,23 @@ const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
 
   if (!contrato) {
     return (
-      <SkeletonScreen
-        sx={{
-          height: {xs: '200px', md: '300px', lg: '400px'},
-          marginTop: {xs: '2%', md: '4%', lg: '1%'},
-          marginBottom: {xs: '9%', md: '15%', lg: '10%'},
-        }}
-      />
+      <>
+        <Typography variant="body2">
+          ...Cargando detalles de tu alquiler
+        </Typography>
+        <SkeletonScreen
+          sx={{
+            height: '400px',
+            marginTop: {xs: '2%', md: '4%', lg: '1%'},
+            marginBottom: {xs: '9%', md: '15%', lg: '10%'},
+          }}
+        />
+      </>
     );
   }
-
+  // @ts-ignore
   const fechaInicio = new Date(contrato.contrato.fecha_inicio);
+  // @ts-ignore
   const duracionMeses = contrato.contrato.duracion_en_meses;
   const fechaFinal = new Date(
     fechaInicio.getFullYear(),
@@ -54,9 +60,12 @@ const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
     (fechaActual.getFullYear() - fechaInicio.getFullYear()) * 12 +
     (fechaActual.getMonth() - fechaInicio.getMonth());
   const mesesRestantes = duracionMeses - mesesTranscurridos;
+  // @ts-ignore
   const valorAlquiler = contrato.contrato.total_mensual_pesos;
+  // @ts-ignore
   const servicios = contrato.contrato.servicios;
   const totalServicios = servicios.reduce(
+    // @ts-ignore
     (total, servicio) => total + servicio.total_mensual_pesos,
     0,
   );
@@ -125,6 +134,7 @@ const InfoContainer: React.FC<InfoContainerProps> = ({contrato}) => {
           </IconButton>
         </SectionContainer>
         {showDetails &&
+        // @ts-ignore
           servicios.map((servicio, index) => (
             <SectionContainer key={index}>
               <Typography variant="body1">{servicio.tipo_servicio}:</Typography>

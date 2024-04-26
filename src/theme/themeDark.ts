@@ -94,7 +94,7 @@ const customTypography = {
     color: '#fff',
     fontWeight: 500,
     [themeDark.breakpoints.up('md')]: {
-      fontSize: pxToRem(24),
+      fontSize: pxToRem(23),
     },
   },
 };

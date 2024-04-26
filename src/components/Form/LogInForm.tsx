@@ -3,8 +3,8 @@ import {Box, FormControl, TextField, Typography} from '@mui/material';
 import {CommonButton} from '@/components';
 import {LogInCredentials} from '@/types/auth';
 import {useFormik} from 'formik';
-import validationSchema from '@/utils/signInUtils/_utils/validation';
-import {fields} from '@/utils/signInUtils/_utils/fields';
+import validationSchema from '../../utils/signInUtils/_utils/validation';
+import {fields} from '../../utils/signInUtils/_utils/fields';
 
 type LogInFormProps = {
   onSubmit: (values: LogInCredentials) => void;
@@ -56,7 +56,7 @@ export const LogInForm: React.FC<LogInFormProps> = ({onSubmit}) => {
           }
           sx={{width: '100%'}}
         />
-                {formik.touched.contrasenia && formik.errors.contrasenia && (
+        {formik.touched.contrasenia && formik.errors.contrasenia && (
           <Typography color="error">{formik.errors.contrasenia}</Typography>
         )}
       </FormControl>

@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {MainAppLayout} from '@/layouts/MainAppLayout/MainAppLayout';
 import InfoContainer from './_components/InfoContainer';
-import PropInfoContainer from './_components/PropInfoContainer';
 import {useSession} from 'next-auth/react';
 import jwt from 'jsonwebtoken';
 import {GetMyRent} from '@/services/rent';
@@ -37,8 +36,6 @@ const UserHome = () => {
 
   return (
     <MainAppLayout title="Tu Alquiler">
-      {/* @ts-ignore */}
-      <PropInfoContainer contrato={contrato} />
       {/* @ts-ignore */}
       <InfoContainer contrato={contrato} />
     </MainAppLayout>

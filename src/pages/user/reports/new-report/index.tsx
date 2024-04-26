@@ -27,7 +27,6 @@ const AddReportPage = () => {
           onSubmit={async values => {
             try {
               setMainLoader(true);
-              console.log(values);
               const response = await sendAReport(values);
               if (response) {
                 setSnackbar({

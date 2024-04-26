@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Grid} from '@mui/material';
+import {Box, Grid, Switch} from '@mui/material';
 import {ContainerLogin, ContentContainer} from '@/components';
 import styles from '@/styles/signIn.module.css';
 import {themeDark} from '@/theme';
@@ -8,7 +8,7 @@ import {LogInCredentials} from '@/types/auth';
 import {AuthenticationError} from '@/types/errors';
 import {useRouter} from 'next/router';
 import {signIn} from 'next-auth/react';
-import {LogInForm} from '@/components';
+import {LogInForm} from '../../../components/Form/LogInForm';
 
 export const SignIn = () => {
   const router = useRouter();
@@ -42,7 +42,6 @@ export const SignIn = () => {
         });
       }
     } catch (error: AuthenticationError) {
-      console.log(error);
       setSnackbar({
         text: error.message || 'Error desconocido',
         severity: 'error',

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box,
   FormControl,
+  Grid,
   InputLabel,
   MenuItem,
   Select,
@@ -36,9 +37,11 @@ export const NewReportForm: React.FC<FormProps> = ({id_usuario, onSubmit}) => {
 
   return (
     <Box component="form" onSubmit={formik.handleSubmit} sx={{width: '80%'}}>
-      <FormControl fullWidth margin="normal">
+      <Grid item xs={12}>
         <InputLabel id="tipo-label">Tipo</InputLabel>
         <Select
+          fullWidth
+          placeholder="Tipo"
           labelId="tipo-label"
           name="tipo"
           value={formik.values.tipo}
@@ -52,7 +55,7 @@ export const NewReportForm: React.FC<FormProps> = ({id_usuario, onSubmit}) => {
         {formik.touched.tipo && formik.errors.tipo && (
           <Typography color="error">{formik.errors.tipo}</Typography>
         )}
-      </FormControl>
+      </Grid>
 
       <FormControl fullWidth margin="normal">
         <TextField

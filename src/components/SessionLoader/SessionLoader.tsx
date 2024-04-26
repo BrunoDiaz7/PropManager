@@ -9,15 +9,9 @@ type SessionLoaderProps = {
 export const SessionLoader: React.FC<SessionLoaderProps> = ({children}) => {
   const {data: session, status} = useSession();
 
-  // console.log({session, status});
-  // console.log(session?.usuario)
-
   if (status === 'authenticated') {
     setToken(session.usuario.info.token);
-
-    const decodedToken = jwt.decode(session.usuario.info.token);
-
-    console.log(decodedToken);
+    const decodedtoken = jwt.decode(session.usuario.info.token);
   }
 
   if (status === 'unauthenticated') {

@@ -22,7 +22,7 @@ export const ReportCard: React.FC<ReportCardProps> = ({
   estado,
   descripcion,
 }) => {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
   const handleClick = () => {
     setShowDetails(!showDetails);
   };

@@ -7,22 +7,16 @@ const StyledSkeletonScreen = styled(Skeleton)({
   color: 'white',
   borderRadius: '7px',
   [themeDark.breakpoints.up('sm')]: {
-    width: '50%',
+    width: '30%',
   },
 });
 
 type SkeletonScreenProps = {
-  children?: React.ReactNode;
   sx?: Object;
 };
 
-export const SkeletonScreen: React.FC<SkeletonScreenProps> = ({
-  sx,
-  children,
-}) => {
+export const SkeletonScreen: React.FC<SkeletonScreenProps> = ({sx}) => {
   return (
-    <StyledSkeletonScreen sx={sx} animation="wave" variant="rectangular">
-      {children}
-    </StyledSkeletonScreen>
+    <StyledSkeletonScreen sx={sx} animation="wave" variant="rectangular" />
   );
 };

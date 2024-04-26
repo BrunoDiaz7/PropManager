@@ -30,7 +30,7 @@ export const SnackbarAlert: React.FC<SnackbarAlertProps> = ({
   return (
     <Snackbar
       open={isOpen}
-      autoHideDuration={800}
+      autoHideDuration={200}
       onClose={handleClose}
       anchorOrigin={{
         vertical: 'top',

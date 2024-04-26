@@ -1,10 +1,19 @@
 import {privateInstance} from '../axios';
-import {User} from '@/types/user';
+import {CreateUser, userAttributesResponse} from '@/types/user';
 
-export const getMyUser = async () => {
+export const getAllUsers = async () => {
   try {
-    const response = await privateInstance.get('/users/me?populate=%2A');
-    return response.data as User;
+    const response = await privateInstance.get('/usuarios');
+    return response.data as userAttributesResponse[];
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createUser = async (body: CreateUser) => {
+  try {
+    const response = await privateInstance.post('/usuarios', body);
+    return response;
   } catch (error) {
     throw error;
   }

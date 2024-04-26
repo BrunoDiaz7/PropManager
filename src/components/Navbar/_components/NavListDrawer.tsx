@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import Link from 'next/link';
 import React from 'react';
+import {logOut} from '@/services/auth';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 interface NavItems {
   title: string;
@@ -55,6 +57,12 @@ export const NavListDrawer: React.FC<NavListDrawerProps> = ({
             </ListItem>
           ))}
         </List>
+        {auth && (
+          <IconButton onClick={() => logOut()}>
+            <LogoutIcon sx={{color: 'white'}} />
+            <Typography variant="body2">Cerrar Sesión</Typography>
+          </IconButton>
+        )}
       </nav>
     </ListContainer>
   );

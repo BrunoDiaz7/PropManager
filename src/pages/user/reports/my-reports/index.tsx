@@ -10,6 +10,8 @@ const MyReportsPage = () => {
   const obtenerMisQuejas = async () => {
     try {
       const response = await getMyReports();
+      // Ordenar los reportes por ID de forma descendente
+      response.sort((a, b) => b.id_queja - a.id_queja);
       // @ts-ignore
       setReports(response);
     } catch (error) {

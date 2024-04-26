@@ -1,7 +1,7 @@
-import {AdminPagesLayout} from '@/layouts/AdminPagesLayout/AdminPagesLayout';
+import CrearUsuario from './locatarios/crear-usuario';
 
 const AdminHome = () => {
-  return <AdminPagesLayout />;
+  return <CrearUsuario />;
 };
 
 export default AdminHome;
